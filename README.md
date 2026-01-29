@@ -11,5 +11,5 @@ sudo apt-get install libpcap-dev
 g++ main.cpp -o packet_capture -lpcap
 
 # execute
-sudo ./packet_capture
+sudo ./packet_capture {target ip} {target port} {target NIC device}
 ```
