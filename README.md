@@ -8,7 +8,7 @@ filter packet and save as pcap file wit C++
 sudo apt-get install libpcap-dev
 
 # compile use lpcap option
-g++ packet_capture.cpp -o packet_capture -lpcap
+g++ main.cpp -o packet_capture -lpcap
 
 # execute
 sudo ./packet_capture
