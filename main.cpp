@@ -6,7 +6,7 @@ pcap_t* handle;
 pcap_dumper_t* pdumper;
 
 void signal_handler(int sig) {
-    std::cout << "\n캡처를 중단하고 파일을 저장합니다..." << std::endl;
+    std::cout << "\nstop capture and save file..." << std::endl;
     if (pdumper) pcap_dump_close(pdumper);
     if (handle) pcap_close(handle);
     exit(0);
@@ -14,7 +14,7 @@ void signal_handler(int sig) {
 
 int main() {
     char errbuf[PCAP_ERRBUF_SIZE];
-    const char* dev = "eth0";            // 사용할 네트워크 장치명 (ifconfig로 확인)
+    const char* dev = "eth0";            // name of NIC (check with ifconfig)
     const char* filename = "capture.pcap";
     const char* target_ip = "192.168.1.10";
     int target_port = 80;
