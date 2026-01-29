@@ -14,10 +14,10 @@ void signal_handler(int sig) {
 
 int main() {
     char errbuf[PCAP_ERRBUF_SIZE];
-    const char* dev = "eth0";            // name of NIC (check with ifconfig)
+    const char* dev = "lo";            // name of NIC (check with ifconfig)
     const char* filename = "capture.pcap";
-    const char* target_ip = "192.168.1.10";
-    int target_port = 80;
+    const char* target_ip = "localhost";
+    int target_port = 8888;
 
     // 1. open NIC
     handle = pcap_open_live(dev, BUFSIZ, 1, 1000, errbuf);
